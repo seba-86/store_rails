@@ -25,5 +25,20 @@
   <%= @product.sku %>
 </p>
 
+
+  <!-- <strong>Colors Availables:</strong>
+  <% @colors.each do |color| %>
+  <li><#%= color.name %></li>
+<% end %> -->
+<div class="col-md-12">
+  <%= simple_form_for :detail do |f| %>
+ <strong>Colores Availables </strong> <%= f.input :color_id, as: :check_boxes, collection: @colors, label: false%>
+ <strong>Sizes Availables</strong> <%= f.input :size_id, as: :check_boxes, collection: @sizes, label: false%>
+  <%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
+<% end %>
+
+</div>
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

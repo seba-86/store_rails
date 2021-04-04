@@ -8,6 +8,8 @@ class ProductsController < ApplicationController
 
   # GET /products/1
   def show
+    @colors = Color.all
+    @sizes = Size.all
   end
 
   # GET /products/new
