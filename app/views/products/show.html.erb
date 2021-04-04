@@ -31,14 +31,14 @@
   <li><#%= color.name %></li>
 <% end %> -->
 <div class="col-md-12">
-  <%= simple_form_for :detail do |f| %>
- <strong>Colores Availables </strong> <%= f.input :color_id, as: :check_boxes, collection: @colors, label: false%>
- <strong>Sizes Availables</strong> <%= f.input :size_id, as: :check_boxes, collection: @sizes, label: false%>
+<%= simple_form_for :detail do |f| %>
+<%= f.input :color_id, as: :check_boxes, collection: @colors, label: 'Colors'%>
+<%= f.input :size_id, as: :check_boxes, collection: @sizes, label: 'Sizes', input_html: {multiple: false}%>
   <%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
 <% end %>
 
 </div>
-</p>
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Back', root_path %>

@@ -3,6 +3,11 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
+  <div class="form-check">
+  <%= f.association :categories, as: :radio_buttons%>
+  </div>
+
+  </div>
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
@@ -11,6 +16,7 @@
     <%= f.input :sku %>
   </div>
 
+  
   <div id="details">
     <%= f.simple_fields_for :details do |detail| %>
     <%= render 'detail_fields', f: detail %>

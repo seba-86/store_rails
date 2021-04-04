@@ -1,0 +1,4 @@
+<div class="nested-fields">
+    <%= f.input :category_id, as: :select, collection: Category.all %>
+    <%= link_to_remove_association "remove Category", f %>
+</div>
