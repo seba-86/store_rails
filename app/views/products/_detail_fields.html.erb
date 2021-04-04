@@ -1,0 +1,9 @@
+<div class="nested-fields">
+    <%= f.input :color_id, as: :select, collection: Color.all %>
+    <%= f.input :stock %>
+    <%= link_to_remove_association "remove Color", f %>
+
+    <%= f.input :size_id, as: :select, collection: Size.all %>
+    <%= f.input :stock %>
+    <%= link_to_remove_association "remove Size", f %>
+</div>
