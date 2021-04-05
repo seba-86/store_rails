@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # get 'carts/update'
+  # get 'carts/show'
+
+  resource :cart, only: [:update, :show]
   devise_for :admins
   devise_for :users
 

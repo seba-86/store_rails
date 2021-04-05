@@ -34,9 +34,16 @@
 <%= simple_form_for :detail do |f| %>
 <%= f.input :color_id, as: :check_boxes, collection: @colors, label: 'Colors'%>
 <%= f.input :size_id, as: :check_boxes, collection: @sizes, label: 'Sizes', input_html: {multiple: false}%>
+  <!-- <%#= f.submit "Add to cart", class:"btn btn-primary btn-sm" %> -->
+<% end %>
+<div class="col-md-12">
+  <%= form_for :cart, url: cart_path, method: :put do |f| %>
+  <%= f.hidden_field :product_id, value: @product.id %>
+  <%= f.hidden_field :quantity, value: 1%>
   <%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
 <% end %>
 
+</div>
 </div>
 
 
