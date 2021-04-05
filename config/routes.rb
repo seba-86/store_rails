@@ -2,7 +2,13 @@ Rails.application.routes.draw do
   # get 'carts/update'
   # get 'carts/show'
 
-  resource :cart, only: [:update, :show]
+  resource :cart, only: [:update, :show] do
+  member do 
+    post :pay_with_paypal
+    get :process_paypal_payment
+  end
+end
+
   devise_for :admins
   devise_for :users
 

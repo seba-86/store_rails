@@ -32,8 +32,8 @@
 <% end %> -->
 <div class="col-md-12">
 <%= simple_form_for :detail do |f| %>
-<%= f.input :color_id, as: :check_boxes, collection: @colors, label: 'Colors'%>
-<%= f.input :size_id, as: :check_boxes, collection: @sizes, label: 'Sizes', input_html: {multiple: false}%>
+<%= f.input :color_id, as: :radio_buttons, collection: @colors, label: 'Colors'%>
+<%= f.input :size_id, as: :radio_buttons, collection: @sizes, label: 'Sizes'%>
   <!-- <%#= f.submit "Add to cart", class:"btn btn-primary btn-sm" %> -->
 <% end %>
 <div class="col-md-12">
