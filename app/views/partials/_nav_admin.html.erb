@@ -1,0 +1,22 @@
+<nav class="nav bg-light ">
+    <li class="nav-item">
+        <%= link_to 'Inicio', root_path, class:'nav-link' %>
+    </li>
+
+    <% if admin_signed_in?%>
+
+    <li class="nav-item">
+        <%= link_to 'Cerrar Sesion', destroy_admin_session_path, method: :delete, class:'nav-link' %>
+    </li>
+    <li class="nav-item p-2">
+        hola <%= current_admin.email %>
+    </li>
+    <li class="nav-item">
+        <%= link_to 'Crear Productos', new_product_path, class:'nav-link' %>
+    </li>
+    
+    <% else %>
+    
+    
+    <%end %>
+</nav>

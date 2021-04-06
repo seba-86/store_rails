@@ -24,6 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'cocoon'
 gem 'simple_form'
 gem 'devise'
+gem 'activemerchant'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

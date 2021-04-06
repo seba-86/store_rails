@@ -16,10 +16,18 @@
   <% if notice  %>
   <p class="alert alert-primary"><%= notice %></p>
   <% end %>
-<% if alert %>
+  <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
   <% end %>
+  
+  <% if user_signed_in?%>
   <%= render 'partials/nav' %>
+  <% elsif admin_signed_in? %>
+  <%= render 'partials/nav_admin' %>
+  <% else %>
+  <%= render 'partials/nav' %>
+  <%end %>
+  
   <%= yield %>
 </body>
 
