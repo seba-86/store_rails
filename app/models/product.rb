@@ -9,6 +9,13 @@ class Product < ApplicationRecord
 
     accepts_nested_attributes_for :details ,allow_destroy: true
     
+    def self.cataloge
+        # self.all
+        # details = Details.where("stock > 0")
+
+        details = Detail.select(:product_id).distinct.pluck(:product_id)
+        Product.where(id: details)
+    end
     
-    
+
 end

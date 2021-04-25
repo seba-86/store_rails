@@ -26,10 +26,6 @@
 </p>
 
 
-  <!-- <strong>Colors Availables:</strong>
-  <% @colors.each do |color| %>
-  <li><#%= color.name %></li>
-<% end %> -->
 <div class="col-md-12">
 <%= simple_form_for :detail do |f| %>
 <%= f.input :color_id, as: :radio_buttons, collection: @colors, label: 'Colors'%>

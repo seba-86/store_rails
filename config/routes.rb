@@ -9,9 +9,11 @@ end
   devise_for :admins
   devise_for :users
 
+  resources :products
+  resources :categories
+  
   authenticate :admin do
-    resources :products
-    resources :categories
+    
     resources :sizes
     resources :colors
     resources :coupons
